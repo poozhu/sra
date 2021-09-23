@@ -1,0 +1,57 @@
+{
+  "name": "sra-cli",
+  "version": "1.0.0",
+  "description": "start react app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sra": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poozhu/sra.git"
+  },
+  "keywords": [
+    "react",
+    "cli"
+  ],
+  "author": "poozhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poozhu/sra/issues"
+  },
+  "homepage": "https://github.com/poozhu/sra#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.2.0",
+    "download-git-repo": "^3.0.2",
+    "fast-glob": "^3.2.7",
+    "inquirer": "^8.1.5",
+    "log-symbols": "^5.0.0",
+    "mkdirp": "^1.0.4",
+    "ora": "^6.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.1.2"
+  },
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,}": [
+      "eslint --fix"
+    ]
+  }
+}
